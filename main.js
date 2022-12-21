@@ -17,9 +17,21 @@ if(!roomId){
 }
 const servers = {
     iceServers: [
-        {
-            urls:['stun:stun1.1.google.com:19302', 'stun:stun2.1.google.com:19302']
-        }
+        // {
+        //     urls:['stun:stun1.1.google.com:19302', 'stun:stun2.1.google.com:19302']
+        // },
+        
+            // {
+            //     urls: 'turn:openrelay.metered.ca:80',
+            //     username: 'openrelayproject',
+            //     credentials: 'openrelayproject'
+            // },
+            {
+                url: 'turn:turn.anyfirewall.com:443?transport=tcp',
+                credential: 'webrtc',
+                username: 'webrtc'
+            }
+        
     ]
 }
 
